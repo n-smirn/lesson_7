@@ -8,15 +8,7 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
-public class FirstTest {
-    @BeforeAll
-    static void beforeAll() {
-        Configuration.browser = "chrome";
-        Configuration.baseUrl = "https://demoqa.com";
-        Configuration.pageLoadStrategy = "eager";
-        Configuration.browserSize = "1920x1080";
-        Configuration.holdBrowserOpen = true;
-    }
+public class FirstTest extends TestBase {
 
     @Test
     void fillRegFormTest() {
