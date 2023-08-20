@@ -1,6 +1,7 @@
 package lesson7;
 
 import org.junit.jupiter.api.Test;
+import pages.RegistrationPage;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
@@ -10,9 +11,7 @@ public class FirstTest extends TestBase {
 
     @Test
     void fillRegFormTest() {
-        open("/automation-practice-form");
-        executeJavaScript("$('#fixedban').remove()");
-        executeJavaScript("$('footer').remove()");
+        new RegistrationPage().openPage();
 
         $("#firstName").setValue("Nancy");
         $("#lastName").setValue("Fancy");
